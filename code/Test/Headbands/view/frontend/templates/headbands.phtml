@@ -1,0 +1,50 @@
+<?php
+/**
+ * @var \Test\Headbands\Block\PostView $block
+ */
+?>
+<?php
+$posts = $block->getPosts();
+$n = $posts->count();
+$i = 0;
+?>
+<?php if ($n > 0): ?>
+<div class="headbands">
+    <div class="headbands-post-list">
+        <?php foreach ($posts as $key => $post): ?>
+            <div class="headbands-post-list-item <?php echo $i == 0 ? "enabled" : "disabled" ?>" id="<?php echo "item-".$i ?>">
+                <div class="headbands-btn">
+                    <button type="button" 
+                            class="headbands-left-btn" 
+                            <?php if ($i <= 0) { echo "disabled"; } ?>
+                            value="<?php echo $i - 1; ?>"
+                            onclick="require(['jquery', 'headbandspost'], function($, updatePostBlock) { updatePostBlock(<?php echo $i; ?>, <?php echo $i - 1; ?>); });"
+                            ><</button>
+                </div>
+                
+                <div class="post-block">
+                    <div class="post-img">
+                        <img src="<?php echo $post->getImage() ?>" alt="" />  
+                    </div>
+                    <div class="post-desc">
+                        <p><?php echo $post->getName() ?></p>  
+                    </div>
+                    <div class="post-link">
+                        <a href="<?php echo $post->getLink() ?>"><?= __('Learn more') ?></a>
+                    </div>
+                </div>
+                
+                <div class="headbands-btn">
+                    <button type="button" 
+                            class="headbands-right-btn" 
+                            <?php if ($i >= $n - 1) { echo "disabled"; } ?>
+                            value="<?php echo $i + 1; ?>"
+                            onclick="require(['jquery', 'headbandspost'], function($, updatePostBlock) { updatePostBlock(<?php echo $i; ?>, <?php echo $i + 1; ?>); });"
+                            >></button>
+                </div>
+            </div>
+            <?php $i++ ?>
+        <?php endforeach; ?>
+    </div>
+</div>
+<?php endif; ?>

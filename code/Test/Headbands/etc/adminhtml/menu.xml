@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Test_Headbands::offres" title="Offres" module="Test_Headbands" sortOrder="51" resource="Test_Headbands::content"/>
+        <add id="Test_Headbands::post" title="Manage Posts" module="Test_Headbands" sortOrder="10" action="test_headbands/post" resource="Test_Headbands::content" parent="Test_Headbands::offres"/>
+    </menu>
+</config>

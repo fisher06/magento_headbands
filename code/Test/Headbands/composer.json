@@ -1,0 +1,24 @@
+{
+  "name": "test/headbands",
+  "description": "",
+
+  "type": "magento2-module",
+  "version": "0.1.0",
+  "license": "No License",
+  "authors": [
+      {
+        "name": "wei",
+        "email": "wei.xie8906@gmail.com"
+      }
+  ],
+
+  "autoload": {
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+          "Test\\Headbands\\": ""
+      }
+  }
+
+}
