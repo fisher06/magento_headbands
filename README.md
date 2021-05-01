@@ -67,3 +67,6 @@ php bin/magento setup:upgrade
 ### Step 4: Handling Data Storage
 app/code/Test/Headbands/Setup/InstallSchema.php
 
+### Step 5: Create Model
+### Step 6: Create Admin Grid
+
