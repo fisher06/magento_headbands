@@ -64,4 +64,6 @@ php bin/magento module:enable Test_Headbands
 #Upgrade the database
 php bin/magento setup:upgrade
 ```
+### Step 4: Handling Data Storage
+app/code/Test/Headbands/Setup/InstallSchema.php
 
