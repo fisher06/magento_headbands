@@ -67,6 +67,13 @@ php bin/magento setup:upgrade
 ### Step 4: Handling Data Storage
 app/code/Test/Headbands/Setup/InstallSchema.php
 
-### Step 5: Create Model
-### Step 6: Create Admin Grid
+### Step 5: Create CRUD Models - Resource Model and Model Collection
 
+### Step 6: Create Admin Grid
+#### Create routes admin
+#### Create routes admin
+#### Create admin menu
+#### Create Controller
+#### Create Admin Grid using Component || using Layout
+
+### Step 7: Create 
