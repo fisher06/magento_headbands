@@ -27,4 +27,41 @@ Each folder holds one part of the architecture, as follows:
   
   **view**: includes view files, containing static view files, email templates, design templates, and layout files.
  
+## Create module for Magento 2
+
+### Step 1: Create etc/module.xml file.
+Create etc folder and add the module.xml file   
+app/code/Test/Headbands/etc/module.xml
+```
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="Test_Headbands" setup_version="0.1.0">
+        <sequence>
+            <module name="Magento_Directory" />
+            <module name="Magento_Config" />
+        </sequence>
+    </module>
+</config>
+```
+### Step 2: Create etc/registration.php file
+app/code/Test/Headbands/registration.php
+```
+<?php
+
+\Magento\Framework\Component\ComponentRegistrar::register(
+    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+    'Test_Headbands',
+    __DIR__
+);
+```
+### Step 3: Enable the module
+Run the command as:
+```
+#List of modules
+php bin/magento module:status
+#Enable the module
+php bin/magento module:enable Test_Headbands
+#Upgrade the database
+php bin/magento setup:upgrade
+```
 
