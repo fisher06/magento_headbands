@@ -15,7 +15,7 @@ use \Magento\Framework\DB\Ddl\Table;
 class InstallSchema implements InstallSchemaInterface
 {
     /**
-     * Install Blog Posts table
+     * Install Posts table
      *
      * @param SchemaSetupInterface $setup
      * @param ModuleContextInterface $context
